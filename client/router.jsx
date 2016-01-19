@@ -11,35 +11,35 @@
 FlowRouter.route("/", {
     name: "Home",
     action(params) {
-
+        ReactDOM.render(<Home />, document.getElementById("app"));
     }
 });
 
 FlowRouter.route("/root", {
     name: "AppBody",
     action(params) {
-
+        ReactDOM.render(<AppBody />, document.getElementById("app"));
     }
 });
 
 FlowRouter.route("/other", {
     name: "Other",
     action(params) {
-
+        ReactDOM.render(<Other />, document.getElementById("app"));
     }
 });
 
 FlowRouter.route("/settings", {
     name: "Settings",
     action(params) {
-
+        ReactDOM.render(<Settings />, document.getElementById("app"));
     }
 });
 
 
 FlowRouter.notFound = {
     action: function() {
-        ReactLayout.render(<AppNotFound />, {content: <NotFound />});
+        ReactDOM.render(<AppNotFound />, document.getElementById("app"));
     }
 };
 
