@@ -11,7 +11,7 @@
 FlowRouter.route("/", {
     name: "Home",
     action(params) {
-        ReactDOM.render(<Home />, document.getElementById("app"));
+        renderMainLayoutWith(<Home />);
     }
 });
 
@@ -45,7 +45,7 @@ FlowRouter.notFound = {
 
 
 Meteor.startup(function () {
-    ReactDOM.render(<AppBody />, document.getElementById("app"));
+   renderMainLayoutWith(<Home />);
 });
 
 function renderMainLayoutWith(component) {

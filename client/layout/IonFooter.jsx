@@ -13,7 +13,7 @@ IonFooter = React.createClass({
             <div className="tabs tabs-icon-top">
             {this.props.tabs.map((tab, i) => {
                 return (
-                    <a className="tab-item" key={tab} onClick={this.ionModal.bind(null, tab)}>
+                    <a className="tab-item" key={tab}>
                         <i className="icon ion-star"></i>
                         {tab}
                     </a>
