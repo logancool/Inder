@@ -6,7 +6,7 @@ Home = React.createClass({
         }
     },
     render() {
-        let list = this.data.users.map(function(user) {
+        let list = this.data.users.map(function (user) {
             return (
                 <div className="item item-avatar" key={user._id}>
                     <img src={user.avatar}></img>
@@ -16,8 +16,12 @@ Home = React.createClass({
             )
         })
         return (
-            <div className="list">
-                {list}
+            <div className="scroll-content ionic-scroll">
+                <div className="content overflow-scroll has-header">
+                    <div className="list">
+                        {list}
+                    </div>
+                </div>
             </div>
         )
     }
