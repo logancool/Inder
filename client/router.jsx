@@ -18,28 +18,28 @@ FlowRouter.route("/", {
 FlowRouter.route("/root", {
     name: "AppBody",
     action(params) {
-        ReactDOM.render(<AppBody />, document.getElementById("app"));
+        renderMainLayoutWith(<AppBody />);
     }
 });
 
 FlowRouter.route("/other", {
     name: "Other",
     action(params) {
-        ReactDOM.render(<Other />, document.getElementById("app"));
+        renderMainLayoutWith(<Other />);
     }
 });
 
 FlowRouter.route("/settings", {
     name: "Settings",
     action(params) {
-        ReactDOM.render(<Settings />, document.getElementById("app"));
+        renderMainLayoutWith(<Settings />);
     }
 });
 
 
 FlowRouter.notFound = {
     action: function() {
-        ReactDOM.render(<AppNotFound />, document.getElementById("app"));
+        renderMainLayoutWith(<AppNotFound />);
     }
 };
 

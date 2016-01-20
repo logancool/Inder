@@ -16,4 +16,12 @@ IonModal = React.createClass({
             </div>
         )
     }
+});
+
+Backdrop = React.createClass({
+    render() {
+        return (
+            <div className="modal-backdrop active"></div>
+        )
+    }
 })

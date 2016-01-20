@@ -16,12 +16,8 @@ Home = React.createClass({
             )
         })
         return (
-            <div className="scroll-content ionic-scroll">
-                <div className="content overflow-scroll has-header">
-                    <div className="list">
-                        {list}
-                    </div>
-                </div>
+            <div className="list">
+                {list}
             </div>
         )
     }
