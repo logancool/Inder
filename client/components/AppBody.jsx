@@ -5,20 +5,8 @@ AppBody = React.createClass({
     getMeteorData() {
         return {}
     },
-    ionModal(tab) {
-        this.setState({
-            modal: (
-                <IonModal>
-                    <div className="h1 title">{tab}</div>
-                    <button onClick={ () => this.setState({modal:false}) } className="button button-icon active">
-                        <i className="icon ion-ios-close-empty"></i>
-                    </button>
-                </IonModal>
-            )
-        })
-    },
-    render() {
 
+    render() {
         return (
             <div className="ionic-body">
                 <div className="view">
