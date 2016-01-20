@@ -1,12 +1,9 @@
+let Transition = React.addons.CSSTransitionGroup;
+
 AppBody = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         return {}
-    },
-    getDefaultProps() {
-        return {
-            tabs: ["Tab 1", "Tab 2", "Tab 3"]
-        }
     },
     ionModal(tab) {
         this.setState({
@@ -21,35 +18,14 @@ AppBody = React.createClass({
         })
     },
     render() {
+
         return (
             <div className="ionic-body">
-
-                {this.state.modal}
-
-                <div className="tabs tabs-icon-top">
-                    {this.props.tabs.map((tab, i) => {
-                        return (
-                            <a className="tab-item" key={tab} onClick={this.ionModal.bind(null, tab)}>
-                                <i className="icon ion-star"></i>
-                                {tab}
-                            </a>
-                        )
-                    })
-                    }
-                </div>
-                <div className="bar bar-header bar-light">
-                    <ReactRouter.Link className="button button-icon icon ion-gear-a"
-                                      to={"/settings"}></ReactRouter.Link>
-                    <ReactRouter.Link className="h1 title" to={"/"}>App Name</ReactRouter.Link>
-                    <ReactRouter.Link className="button button-icon icon ion-heart" to={"/other"}></ReactRouter.Link>
-                </div>
                 <div className="view">
                     <div className="scroll-content ionic-scroll">
                         <div className="content overflow-scroll has-header">
-                            <ReactRouter.RouteHandler />
                         </div>
                     </div>
-
                 </div>
             </div>
         )

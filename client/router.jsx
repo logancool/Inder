@@ -45,5 +45,13 @@ FlowRouter.notFound = {
 
 
 Meteor.startup(function () {
-    ReactDOM.render(<AppLoading />, document.getElementById("app"));
+    ReactDOM.render(<AppBody />, document.getElementById("app"));
 });
+
+function renderMainLayoutWith(component) {
+    ReactLayout.render(MainLayout, {
+        header: <IonHeader />,
+        content: component,
+        footer: <IonFooter />
+    });
+}
