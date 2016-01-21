@@ -3,7 +3,7 @@
 
 // Modal starts shifted 100% below the app.
 .modal-enter {
-  transform: translateY(200%);
+  transform: translateY(100%);
 }
 // When it's active, it transitions back to position.
 .modal-enter.modal-enter-active {
