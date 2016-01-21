@@ -7,7 +7,9 @@ IonFooter = React.createClass({
     },
     render() {
         return (
-            <div className="nothing"></div>
+            <div className="ionic-body">
+                <AppBody />
+            </div>
         )
     }
 });
